@@ -1,0 +1,35 @@
+@import '../../scss/utils/variables';
+@import '../../scss/utils/mixins';
+
+.skillsSection{
+    background-color: #dfe7ef;
+    padding: $padding-section;
+
+
+    .designSkills {
+        width: 80%;
+        @include displayFlex(space-around, null, null, null, wrap);
+        margin: auto;
+        margin-bottom: 3vw;
+
+        .skillImg {
+            max-width: 100px;
+            width: 10vw;
+        }
+
+        
+    }
+
+    .devSkills {
+        width: 80%;
+        @include displayFlex(space-around, null, null, null, wrap);
+        margin: auto;
+
+        .skillImg {
+            max-width: 100px;
+            width: 10vw;
+        }
+
+        
+    }
+}

@@ -1,0 +1,22 @@
+@import '../../scss/utils/variables';
+@import '../../scss/utils/mixins';
+
+.heroHeader {
+    padding-top: 100px;
+    width: 100%;
+    text-align: center;
+    background-color: $secondary-color;
+    height: 45vw;
+    min-height: 400px;
+    @include displayFlex(center, center);
+
+  
+    h1 {
+        margin: 0;
+
+        .react-simple-typewriter-cursor {
+            z-index: 1; 
+          }
+    }
+    
+}

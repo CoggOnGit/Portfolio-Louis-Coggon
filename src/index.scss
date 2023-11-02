@@ -1,0 +1,55 @@
+@import './scss/utils/variables';
+@import './scss/utils/mixins';
+
+body, html {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+  font-family: 'Montserrat', sans-serif;
+  color: $primary-color;
+
+  #root {
+    padding: 0;
+    margin: 0;
+  }
+
+  h1 {
+    @include headerFont();
+        font-size: $font-size-header-l;
+
+    @include respondTo(sm) {
+        font-size: $font-size-header-m;
+    }
+
+    @include respondTo(xs) {
+        font-size: $font-size-header-s;
+    }
+  }
+
+  h2 {
+    @include titleFont();
+        font-size: $font-size-title-l;
+
+    @include respondTo(sm) {
+        font-size: $font-size-title-m;
+    }
+
+    @include respondTo(xs) {
+        font-size: $font-size-title-s;
+    }
+  }
+
+  p {
+    @include textFont();
+        font-size: $font-size-text-l;
+
+    @include respondTo(sm) {
+        font-size: $font-size-text-m;
+    }
+
+    @include respondTo(xs) {
+        font-size: $font-size-text-s;
+    }
+  }
+}

@@ -1,0 +1,49 @@
+@mixin displayFlex($justify:null, $align:null, $direction:null, $gap:null, $wrap:null){
+    display: flex;
+    justify-content: $justify;
+    align-items: $align;
+    flex-direction: $direction;
+    gap: $gap;
+    wrap: $wrap;
+}
+
+@mixin respondTo($breakpoint){
+    @if ($breakpoint == xs){
+        @media screen and (max-width: 650px){
+            @content;
+        }
+    }
+
+    @if ($breakpoint == sm){
+        @media screen and (max-width: 850px){
+            @content;
+        }
+    }
+
+    @if ($breakpoint == sl){
+        @media screen and (max-width: 1200px){
+            @content;
+        }
+    }
+}
+
+@mixin headerFont(){
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin titleFont(){
+        font-family: 'Poppins', sans-serif;
+        font-weight: 400;
+        white-space: nowrap;
+        margin: 0 5%;
+        padding: 0 0 3vw 0;
+        text-align: center;
+}
+
+@mixin textFont(){
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+}

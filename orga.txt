@@ -1,0 +1,20 @@
+MY-PORTFOLIO
+    /node_modules
+    /public
+    /src
+        /assets
+            booki-d.png
+        /components
+            /Projets
+                Projets.jsx
+                Projets.scss
+        /data
+            projetData.js
+        /pages
+        /sccs\utils
+        index.scss
+        main.jsx
+    index.html
+    package-lock.json
+    package.jsonvite.config.js
+    .gitignore 

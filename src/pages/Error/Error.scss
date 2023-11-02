@@ -1,0 +1,44 @@
+@import '../../scss/utils/variables';
+@import '../../scss/utils/mixins';
+
+.error-main {
+    padding: $padding-section;
+    width: 100%;
+    color: $primary-color;
+    background-color: $secondary-color;
+    margin: auto;
+    text-align: center;
+
+    h1 {
+        font-size: 288px;
+        font-weight: 700;
+        margin: auto;
+        margin-bottom: 80px;
+        margin-top: 80px;
+
+        @include respondTo(sm) {
+                font-size: 150px;
+                margin-bottom: 80px;
+        }
+
+        @include respondTo(xs) {
+                font-size: 96px;
+        }
+    }
+
+    p {
+        margin-bottom: 139px;
+
+        @include respondTo(sm) {
+            margin-bottom: 113px;
+        }
+    }
+
+    a {
+        color: $primary-color;
+
+        @include respondTo(sm) {
+            font-size: 14px;
+        }
+    }
+}

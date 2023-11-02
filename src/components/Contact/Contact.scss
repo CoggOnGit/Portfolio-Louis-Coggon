@@ -1,0 +1,104 @@
+@import '../../scss/utils/variables';
+@import '../../scss/utils/mixins';
+
+.contact {
+    @include displayFlex(null, center, column);
+    width: 100%;
+    background-color: $primary-color;
+    color: $secondary-color;
+    padding: $padding-section;
+
+
+    form {
+        min-width: 300px;
+        width: 40%;
+        margin: auto;
+
+        .formDiv {
+            @include displayFlex(null, null, column);
+            margin-bottom: 30px;
+            
+            
+            input {
+                width: calc(100% - 2 * 11.5px); 
+                height: 60px;
+                padding: 10px;
+                margin: 0;
+                @include textFont();
+                font-size: $font-size-text-s;
+                background-color: $secondary-color;
+
+                @include respondTo(sm) {
+                    width: calc(100% - 2 * 11.5px); 
+                    height: 30px;
+                }
+            }
+            
+            textarea {
+                width: calc(100% - 2 * 10px); 
+                height: 300px;
+                padding: 10px;
+                margin: 0;
+                @include textFont();
+                font-size: $font-size-text-s;
+                background-color: $secondary-color;
+
+            
+                @include respondTo(sm) {
+                    width: calc(100% - 2 * 10px); 
+                }
+
+                @include respondTo(xs) {
+                    height: 200px;
+                }
+            }
+
+            label {
+                font-size: $font-size-title-s;
+                @include textFont();
+                margin-bottom: 5px;
+        
+                @include respondTo(xs) {
+                    font-size: $font-size-text-l;
+                }
+            }
+        }
+
+        .contactBtn{
+            width: 100%;
+            @include displayFlex(center);
+
+            button {
+                width: 50%; 
+                min-width: 210px;
+                height: 70px;
+                font-size: $font-size-text-l;
+                font-weight: 600;
+                align-items: center;
+                white-space: nowrap;
+                background-color: $secondary-color;
+                color: $primary-color;
+                padding: 8px 12px;
+                border-radius: 100px;
+                cursor: pointer;
+                transition: transform 0.2s ease-in-out;
+                display: block;
+
+                &:hover {
+                    transform: scale(1.1);
+                    font-weight: 800;
+                }
+
+                @include respondTo(sm) {
+                    font-size: $font-size-text-m;
+                }
+
+                @include respondTo(xs) {
+                    width: 70%; 
+                    height: 60px;
+                    font-size: $font-size-text-s;
+                }
+            }
+        }
+    }
+}

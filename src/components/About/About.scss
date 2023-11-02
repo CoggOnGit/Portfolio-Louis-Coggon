@@ -1,0 +1,59 @@
+@import '../../scss/utils/variables';
+@import '../../scss/utils/mixins';
+
+.about {
+    background-color: $primary-color;
+    text-align: center;
+    padding: $padding-section;
+  
+    .aboutTitle {
+      @include displayFlex(space-between, baseline);
+  
+      .ligneTitle{
+        width: 100vw;
+        height: 0.5vw;
+        max-height: 5px;
+        background-color: $secondary-color;
+      }
+  
+      h2 {
+        color: $secondary-color;
+      }
+    }
+    .aboutInfo {
+      @include displayFlex(null, center);
+      margin: auto;
+      width: 80%;
+
+      @include respondTo(sl){
+        flex-direction: column;
+      }
+
+      .aboutTexte {
+          color: $secondary-color;
+          width: 100%;
+          text-align: left;
+
+          @include respondTo(xs) {
+            text-align: center;
+          }
+
+      }
+
+      .aboutAnimation {
+        width: 500px;
+        height: 500px;
+        margin-right: 100px;
+        @include respondTo(sl) {
+          margin: auto;
+          min-width: none;
+        }
+
+        @include respondTo(xs) {
+          width: 250px;
+          height: 250px;
+        }
+      
+      }
+    }
+  }

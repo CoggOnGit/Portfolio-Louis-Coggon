@@ -1,0 +1,15 @@
+@import '../../scss/utils/variables';
+@import '../../scss/utils/mixins';
+
+.footer {
+    width: 100%;
+    background-color: $primary-color;
+    color: $secondary-color;
+    margin: 0;
+
+    p {
+        margin: 0;
+        padding: 20px 0;
+        text-align: center;
+    }
+}

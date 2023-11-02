@@ -1,0 +1,119 @@
+@import '../../scss/utils/variables';
+@import '../../scss/utils/mixins';
+
+.projetsSection {
+    @include displayFlex(null, null, column);
+    padding: $padding-section;
+    background-color: $secondary-color;
+  
+    .projetsCategories {
+      margin-bottom: 7vw;
+  
+      .projetsUl {
+        list-style: none;
+        @include displayFlex(space-around);
+        width: 80%;
+        padding: 0;
+        margin: auto;
+        font-size: $font-size-text-l;
+  
+        @include respondTo(xs) {
+          width: 95%;
+          font-size: $font-size-text-s;
+        }
+  
+        li {
+          padding: 10px 20px;
+          position: relative;
+          cursor: pointer;
+          white-space: nowrap;
+
+          &.active {
+            background-color: #ECEFF1; 
+          }
+  
+          @include respondTo(xs) {
+            padding: 0;
+          }
+  
+          &::before {
+            transform: scaleX(0);
+            transform-origin: bottom right;
+          }
+  
+          &:hover::before {
+            transform: scaleX(1);
+            transform-origin: bottom left;
+          }
+  
+          &::before {
+            content: " ";
+            display: block;
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            inset: 0 0 0 0;
+            background: #ECEFF1;
+            z-index: -1;
+            transition: transform 0.3s ease;
+  
+            @include respondTo(xs) {
+              border-bottom: 1px solid black;
+              background: none;
+            }
+          }
+        }
+      }
+    }
+  
+    .projetsGalerie {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      grid-gap: 45px;
+      margin: auto;
+  
+      @media screen and (max-width: 1670px) {
+        grid-template-columns: repeat(3, 1fr);
+      }
+  
+      @include respondTo(sl) {
+        grid-template-columns: repeat(2, 1fr);
+      }
+  
+      @include respondTo(sm) {
+        grid-template-columns: repeat(1, 1fr);
+        gap: 10vw;
+      }
+  
+      .projetsGalerieCard {
+        width: 350px;
+        height: 350px;
+        box-shadow: 0px 15px 35px -5px rgba(50, 88, 130, 0.32);
+        margin: auto;
+        transition: transform 0.2s ease-in-out;
+        background-position: top;
+        margin: auto;
+        background-size: cover;
+        @include displayFlex(flex-end, null, column);
+        text-decoration: none;
+        
+
+      
+        .cardTitle{
+            width: 100%;
+            background-color: black;
+            height: 60px;
+            @include displayFlex(center, center);
+
+            h3 {
+                color: $secondary-color;
+                font-weight: 400;
+                margin: 0;
+            }
+        }
+      
+      }
+    }
+  }
