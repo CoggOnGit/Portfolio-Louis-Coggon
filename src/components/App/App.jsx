@@ -11,7 +11,7 @@ import './App.scss';
 function App() {
 
   return (
-    <BrowserRouter>
+    <BrowserRouter basename="/my-portfolio">
       <header>
         <Nav />
       </header>
