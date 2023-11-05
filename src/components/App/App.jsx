@@ -18,8 +18,8 @@ function App() {
 
       <main>
         <Routes>
-          <Route path="/" element= {<Accueil />} />
-          <Route path="/projet/:id" element= {<Projet data={projetsData}/>} />
+          <Route path="https://coggongit.github.io/my-portfolio/" element= {<Accueil />} />
+          <Route path="https://coggongit.github.io/my-portfolio/projet/:id" element= {<Projet data={projetsData}/>} />
           <Route path="*" element={<Error />} />
         </Routes>
       </main>
