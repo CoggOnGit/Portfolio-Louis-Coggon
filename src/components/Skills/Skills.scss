@@ -5,6 +5,10 @@
     background-color: #dfe7ef;
     padding: $padding-section;
 
+    h2 {
+        color: black;
+    }
+
 
     .designSkills {
         width: 80%;
@@ -15,6 +19,7 @@
         .skillImg {
             max-width: 100px;
             width: 10vw;
+            filter: brightness(10%);
         }
 
         
@@ -28,6 +33,7 @@
         .skillImg {
             max-width: 100px;
             width: 10vw;
+            filter: brightness(10%);
         }
 
         
