@@ -5,11 +5,11 @@ import cvIcon from '../../assets/logos/cv-icon.webp';
 function Menu() {
 
   function handleScrollToSection(event, sectionId) {
-    event.preventDefault(); // Empêche le comportement de lien par défaut
+    event.preventDefault(); 
   
     const section = document.getElementById(sectionId);
     if (section) {
-      const yOffset = 100; // Décalage de 100 pixels
+      const yOffset = 100; 
       const y = section.getBoundingClientRect().top + window.pageYOffset - yOffset;
       window.scrollTo({ top: y, behavior: "smooth" });
     }
@@ -35,7 +35,7 @@ function Menu() {
           <span className='menuTag'>GitHub</span>
           <img className='menuLinksBtnImg' src={githubIcon} alt="Github link" />
         </a>
-        <a className='menuLinksBtn' href='../../../public/CV_Louis_COGGON.jpg' download="CV_Louis_COGGON.jpg" type="application/jpg">
+        <a className='menuLinksBtn' href='https://github.com/CoggOnGit/my-portfolio/releases/download/cv/CV_Louis_COGGON.jpg' download="CV_Louis_COGGON.jpg" type="application/jpg">
           <span className='menuTag'>C V</span>
           <img className='menuLinksBtnImg' src={cvIcon} alt="CV" />
         </a>

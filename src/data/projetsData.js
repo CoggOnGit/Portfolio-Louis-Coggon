@@ -21,7 +21,7 @@ export const projetsData = [
             "Responsif"
         ],
         "lien":"https://github.com/CoggOnGit/Booki.git",
-        "description":"Booki est une entreprise fictive souhaitant développer un site internet qui permette aux usagers de trouver des hébergements et des activités dans la ville de leur choix. J'ai été chargé d'intégrer l'interface responsive du site pour ordinateur, tablette et mobile, en HTML et CSS.",
+        "description":"Booki est une entreprise fictive souhaitant développer un site internet qui permet aux usagers de trouver des hébergements et des activités dans la ville de leur choix. J'ai été chargé d'intégrer l'interface responsive du site pour ordinateur, tablette et mobile, en HTML et CSS.",
         "pictures": [
             bookiD,
             bookiT,
@@ -57,7 +57,8 @@ export const projetsData = [
             "Accessibilité"
         ],
         "lien":"https://github.com/CoggOnGit/Nina.git",
-        "description":"Nina Carducci, photographe, est une cliente fictive qui souhaitait améliorer les performances de son site. Pour ce projet, il fallait faire une optimisation globale du site, que ce soit sur les performances que sur le SEO. Il fallait mettre en place le référencement local, ajouter les metas pour les réseaux sociaux, modifier le site pour qu’il soit plus accessible et faire un rapport d’optimisation pour présenter toutes les actions effectuées et leur impacts.",
+        "description": "Nina Carducci, photographe, est une cliente fictive qui souhaitait améliorer les performances de son site.",
+        "contraintes": "Pour ce projet, il fallait faire une optimisation globale du site, que ce soit sur les performances que sur le SEO. Il fallait mettre en place le référencement local, ajouter les metas pour les réseaux sociaux, modifier le site pour qu’il soit plus accessible et faire un rapport d’optimisation pour présenter toutes les actions effectuées et leur impacts.",
         "pictures": [
             nina,
             ninaB,

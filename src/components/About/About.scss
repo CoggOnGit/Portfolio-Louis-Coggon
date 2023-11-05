@@ -34,7 +34,7 @@
           width: 100%;
           text-align: left;
 
-          @include respondTo(xs) {
+          @include respondTo(sl) {
             text-align: center;
           }
 
