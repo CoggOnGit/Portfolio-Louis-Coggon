@@ -1,22 +1,26 @@
+import { useState } from 'react';
 import './Contact.scss';
 
 function Contact() {
+
+  const [showConfirmation, setShowConfirmation] = useState(false);
+  const handleCheckboxChange = () => {
+    setShowConfirmation(!showConfirmation); 
+  };
+
   return (
     <div className='contact' id='contact'>
       <h2>ME CONTACTER</h2>
-      <form action="/envoyer" method="post">
+      <form name='contact' method='post' className='contact__form'>
         <div className='formDiv'>
-          <label htmlFor="email">E-mail :</label>
-          <input type="email" id="email" name="email" required />
-        </div>
-        <div className='formDiv'>
-          <label htmlFor="message">Message :</label>
-          <textarea id="message" name="message" rows="4" required />
+        <label for='email'>Email: </label>
+        <input type="email" name='email'/>
+
+        <label for='message'>Message: </label>
+        <textarea name='message'></textarea>
         </div>
 
-        <div className='contactBtn'>
-          <button id="submit" type="submit">Envoyer</button>
-        </div>
+        <button type='submit'>Envoyer</button>
       </form>
     </div>
   );

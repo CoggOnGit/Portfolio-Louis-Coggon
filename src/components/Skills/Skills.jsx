@@ -14,7 +14,7 @@ import sassIcon from '../../assets/icon-skills/sass-icon.webp'
 function Skills() {
     return (
         <section className='skillsSection' id='skills'>
-            <h2>MES COMPÈTENCES</h2>
+            <h2>MES COMPÉTENCES</h2>
             <div className='designSkills'>
                 <img className='skillImg' alt='Illustrator icon' src={aiIcon}></img>
                 <img className='skillImg' alt='Photoshop icon'  src={psIcon}></img>

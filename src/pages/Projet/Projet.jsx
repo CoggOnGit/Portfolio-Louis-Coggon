@@ -3,6 +3,7 @@ import { useParams } from 'react-router-dom';
 import Error from '../Error/Error';
 import './Projet.scss';
 import GitLogo from '../../assets/logos/github-logo.webp';
+import ScrollToTop from '../../components/ScrollToTop/ScrollToTop';
 
 function Projet({ data }) {
   const { id } = useParams();
@@ -40,6 +41,7 @@ function Projet({ data }) {
 
   return (
     <div className="projetSection">
+      <ScrollToTop />
       <h1>{selectedCard.title}</h1>
       <a href={selectedCard.lien} alt="Lien vers repo GitHub du projet">
         <img src={GitLogo} alt="Logo GitHub" className="logoGit" />

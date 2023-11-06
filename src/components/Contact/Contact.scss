@@ -8,67 +8,55 @@
     color: $secondary-color;
     padding: $padding-section;
 
+    iframe {
 
+        .lrKTG>.Dq4amc {
+        display: none;
+    }
+
+    }
     form {
         min-width: 300px;
         width: 40%;
         margin: auto;
-
-        .formDiv {
-            @include displayFlex(null, null, column);
-            margin-bottom: 30px;
-            
-            
-            input {
-                width: calc(100% - 2 * 11.5px); 
-                height: 60px;
-                padding: 10px;
-                margin: 0;
-                @include textFont();
-                font-size: $font-size-text-s;
-                background-color: $secondary-color;
-
-                @include respondTo(sm) {
-                    width: calc(100% - 2 * 11.5px); 
-                    height: 30px;
-                }
-            }
-            
-            textarea {
-                width: calc(100% - 2 * 10px); 
-                height: 300px;
-                padding: 10px;
-                margin: 0;
-                @include textFont();
-                font-size: $font-size-text-s;
-                background-color: $secondary-color;
-
-            
-                @include respondTo(sm) {
-                    width: calc(100% - 2 * 10px); 
-                }
-
-                @include respondTo(xs) {
-                    height: 200px;
-                }
-            }
-
-            label {
-                font-size: $font-size-title-s;
-                @include textFont();
-                margin-bottom: 5px;
+        font-size: $font-size-title-s;
+        @include textFont();
+        margin-bottom: 5px;
         
-                @include respondTo(xs) {
-                    font-size: $font-size-text-l;
-                }
+            @include respondTo(xs) {
+                font-size: $font-size-text-l;
             }
-        }
 
-        .contactBtn{
-            width: 100%;
-            @include displayFlex(center);
+            .formDiv {
+                @include displayFlex(null, null, column);
+
+                label {
+                    margin-bottom: 5px;
+                }
+
+                input {
+                    height: 60px;
+                    margin-bottom: 15px;
+                    font-size: $font-size-text-s;
+                    background-color: $secondary-color;
+                    padding-left: 10px;
+
+                }
+
+                textarea {
+                    height: 250px;
+                    margin-bottom: 20px;
+                    font-size: $font-size-text-s;
+                    background-color: $secondary-color;
+                    padding-left: 10px;
+                    padding-top: 10px;
+
+                }
+
+            }
 
             button {
+                margin: auto;
                 width: 50%; 
                 min-width: 210px;
                 height: 70px;
@@ -94,11 +82,8 @@
                 }
 
                 @include respondTo(xs) {
-                    width: 70%; 
-                    height: 60px;
                     font-size: $font-size-text-s;
                 }
-            }
         }
     }
 }
