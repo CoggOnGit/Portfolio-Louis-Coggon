@@ -13,6 +13,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@typeform/embed-react": "^3.8.0",
     "aos": "^3.0.0-beta.6",
     "framer-motion": "^10.16.4",
     "lottie-react": "^2.4.0",
