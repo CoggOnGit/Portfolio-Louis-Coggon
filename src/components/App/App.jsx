@@ -6,12 +6,11 @@ import Accueil from '../../pages/Accueil/Accueil.jsx';
 import Projet from '../../pages/Projet/Projet.jsx';
 import Error from '../../pages/Error/Error.jsx';
 import Footer from '../Footer/Footer.jsx';
-import './App.scss';
 
 function App() {
 
   return (
-    <BrowserRouter basename="/my-portfolio">
+    <BrowserRouter basename="/Portfolio-Louis-Coggon">
       <header>
         <Nav />
       </header>

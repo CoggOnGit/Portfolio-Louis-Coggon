@@ -12,11 +12,15 @@ function Projets() {
     Aos.init();
   }, []);
 
-  const [activeCategory, setActiveCategory] = useState('TOUT'); 
+    const [activeCategory, setActiveCategory] = useState('TOUT'); 
 
-  const filteredProjects = activeCategory === 'TOUT' 
-    ? projetsData 
-    : projetsData.filter(projet => projet.category_id === activeCategory);
+    const filteredProjects = projetsData.filter((projet) => {
+      const isProjectInSelectedCategory =
+        activeCategory === 'TOUT' ||
+        projet.category_id.includes(activeCategory);
+  
+      return isProjectInSelectedCategory;
+    });
 
   const backgroundImageStyle = (imageSrc) => ({
     backgroundImage: `url(${imageSrc})`,
@@ -50,6 +54,12 @@ function Projets() {
             className={activeCategory === 'P' ? 'active' : ''}
           >
             PRINT
+          </li>
+          <li 
+            onClick={() => setActiveCategory('L')} 
+            className={activeCategory === 'L' ? 'active' : ''}
+          >
+            LOGO
           </li>
         </ul>
       </div>

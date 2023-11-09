@@ -39,6 +39,9 @@ function Projet({ data }) {
     }
   };
 
+  // Condition pour afficher ou masquer les boutons du carrousel
+  const showCarouselButtons = selectedCard.pictures.length > 1;
+
   return (
     <div className="projetSection">
       <ScrollToTop />
@@ -56,9 +59,11 @@ function Projet({ data }) {
       </div>
 
       <div className="carouselContainer">
-        <button className="carouselBtn" onClick={showPreviousBox}>
-          <div className="carouselBtnL"></div>
-        </button>
+        {showCarouselButtons && (
+          <button className="carouselBtn" onClick={showPreviousBox}>
+            <div className="carouselBtnL"></div>
+          </button>
+        )}
         <div className="carouselProjet">
           {selectedCard.pictures.map((image, index) => (
             <div
@@ -68,9 +73,11 @@ function Projet({ data }) {
             ></div>
           ))}
         </div>
-        <button className="carouselBtn" onClick={showNextBox}>
-          <div className="carouselBtnD"></div>
-        </button>
+        {showCarouselButtons && (
+          <button className="carouselBtn" onClick={showNextBox}>
+            <div className="carouselBtnD"></div>
+          </button>
+        )}
       </div>
 
       <div className="projetAbout">
