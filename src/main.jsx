@@ -4,6 +4,7 @@ import App from './components/App/App.jsx'
 import './index.scss'
 import { projetsData } from './data/projetsData.js';
 
+
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <App projetsData={projetsData} />
