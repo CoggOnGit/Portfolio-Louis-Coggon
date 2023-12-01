@@ -1,0 +1,53 @@
+@import '../../scss/utils/variables';
+@import '../../scss/utils/mixins';
+
+.connexionSection {
+    padding-top: 200px;
+    padding-bottom: 15vw;
+    background-color: $secondary-color;
+    min-height: 360px;
+
+    @include respondTo(xs) {
+        padding-bottom: 100px;
+    }
+
+    .connexionForm {
+        @include displayFlex(null, null, column);
+        width: 60vw;
+        max-width: 600px;
+        min-width: 300px;
+        margin: auto;
+
+        .connexionFormDiv {
+            @include displayFlex(null, null, column);
+            margin-bottom: 20px;
+
+            label {
+                font-size: 25px;
+                font-weight: 600;
+
+                @include respondTo(sm) {
+                    font-size: 20px;
+                }
+            }
+
+            input {
+                height: 50px;
+                font-size: 20px;
+                padding: 0 10px;
+            }
+        }
+
+        .connexionBtn {
+            width: 250px;
+            height: 50px;
+            margin: auto;
+            border-radius: 50px;
+            border: none;
+            margin-top: 10px;
+            background-color: $primary-color;
+            color: $secondary-color;
+            font-size: 20px;
+        }
+    }
+}

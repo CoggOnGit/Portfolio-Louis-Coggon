@@ -1,0 +1,21 @@
+@import '../../scss/utils/variables';
+@import '../../scss/utils/mixins';
+
+.modaleSection{
+    padding-top: 150px;
+    text-align: center;
+    background-color: $secondary-color;
+
+    h2 {
+        padding-bottom: 0;
+    }
+        .addBtn {
+            height: 40px;
+            border-radius: 50px;
+            padding: 0 15px;
+            background-color: $primary-color;
+            color: $secondary-color;
+            border: none;
+            margin-bottom: 50px;
+        }
+}

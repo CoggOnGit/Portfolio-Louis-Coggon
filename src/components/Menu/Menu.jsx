@@ -1,8 +1,24 @@
+import React, { useState, useEffect } from 'react';
+import { Link,useNavigate } from 'react-router-dom';
 import './Menu.scss';
 import githubIcon from '../../assets/logos/github-icon.webp';
 import cvIcon from '../../assets/logos/cv-icon.webp';
 
-function Menu() {
+
+function Menu({ setIsLoggedIn }) {
+  const navigate = useNavigate();
+  const [isLoggedIn, setIsLoggedInLocal] = useState(!!localStorage.getItem('userToken'));
+
+  useEffect(() => {
+    setIsLoggedInLocal(!!localStorage.getItem('userToken'));
+  }, []);
+
+  const handleLogout = () => {
+    localStorage.removeItem('userToken');
+    setIsLoggedInLocal(false); 
+    setIsLoggedIn(false); 
+    navigate('/'); 
+  };
 
   function handleScrollToSection(event, sectionId) {
     event.preventDefault(); 
@@ -40,6 +56,17 @@ function Menu() {
           <img className='menuLinksBtnImg' src={cvIcon} alt="CV" />
         </a>
       </div>
+      <div className='menuConnexion'>
+                {isLoggedIn ? (
+                    <Link className='connexionLink' to={`/connexion`}>
+                    <button className='logoutMenuBtn' onClick={handleLogout}>Se déconnecter</button>
+                    </Link>
+                ) : (
+                    <Link className='connexionLink' to={`/connexion`}>
+                        <button className='loginMenuBtn'>Se connecter</button>
+                    </Link>
+                )}
+            </div>
       </div>
     </>
   );

@@ -25,20 +25,23 @@
   }
   
   .menu__btn {
-    position: fixed;
-    top: 45px;
-    right: 20px;
+   
     width: 30px;
-    height: 35px;
+    height: 30px;
     cursor: pointer;
     z-index: 1;
+    padding-top: 20px;
+
+    @include respondTo(xs) {
+      padding-right: 15px;
+    }
   
     > span,
     > span::before,
     > span::after {
       display: block;
       position: absolute;
-      width: 100%;
+      width: 30px;
       height: 5px;
       background-color: $primary-color;
       transition-duration: .25s;
@@ -106,6 +109,7 @@
         @include displayFlex(null, center, column);
         font-size: $font-size-text-s;
         text-decoration: none;
+        width: 50px;
 
         .menuTag {
           opacity: 0; 
@@ -124,6 +128,24 @@
         .menuLinksBtnImg {
           width: 30px;
           height: 30px
+        }
+      }
+    }
+    
+    .menuConnexion {
+      text-align: center;
+      margin-top: 15px;
+
+
+      button {
+        text-align: center;
+        border: none;
+        background-color: #ECEFF1;
+        padding: 0;
+        cursor: pointer;
+
+        &:hover {
+          border-bottom: 1px solid black;
         }
       }
     }

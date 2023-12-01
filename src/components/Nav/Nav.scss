@@ -1,31 +1,60 @@
 @import '../../scss/utils/variables';
 @import '../../scss/utils/mixins';
 
+.hidden {
+    display: none !important;
+}
+
 nav {
-    height: 100px;
-    width: 100%;
-    border-bottom: 1px solid black;
-    position: fixed;
-    @include displayFlex(space-between, center);
     z-index: 1;
-    background-color: $secondary-color;
+    position: fixed;
     top: 0;
-    padding-left: 20px;
-    
+    width: 100%;
+    background-color: $secondary-color;
+    border-bottom: 1px solid black;
 
-    .logoImg {
-        width: 100px;
-    }
+    .nav {
+        height: 100px;
+        width: 95%;
+        @include displayFlex(space-between, center);
+        margin: auto;
 
-    .homeLink {
-        margin-right: 45px;
-        text-decoration: none;
-        color: $primary-color;
-        font-size: $font-size-text-l;
-        font-weight: 600;
+        .logoImg {
+            width: 100px;
+        }
 
-        &:hover {
-            font-weight: 800;
+        .admin-overlay {
+            width: 100%;
+            @include displayFlex(center, center);
+
+            p {
+                color: $primary-color;
+                margin-right: 15px;
+
+                @include respondTo(xs) {
+                    display: none;
+                }
+            }
+
+            button {
+                height: 40px;
+                border-radius: 50px;
+                padding: 0 15px;
+                background-color: $primary-color;
+                color: $secondary-color;
+                border: none;
+            }
+        }
+
+        .homeLink {
+            text-decoration: none;
+            color: $primary-color;
+            font-size: $font-size-text-l;
+            font-weight: 600;
+
+            &:hover {
+                font-weight: 800;
+            }
         }
     }
 }
