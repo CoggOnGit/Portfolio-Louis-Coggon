@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { useAuth } from '../../components/AuthContext/AuthContext.jsx';
 import axios from 'axios';
 import ScrollToTop from '../../components/ScrollToTop/ScrollToTop';
 import './Connexion.scss';
@@ -8,15 +9,15 @@ function Connexion() {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
+
   const navigate = useNavigate();
+  const { setIsLoggedIn } = useAuth();
 
   const handleUsernameChange = (event) => {
-    setUsername(event.target.value);
-  };
+    setUsername(event.target.value);};
 
   const handlePasswordChange = (event) => {
-    setPassword(event.target.value);
-  };
+    setPassword(event.target.value);};
 
   const handleSubmit = (event) => {
     event.preventDefault();
@@ -32,6 +33,7 @@ function Connexion() {
         if (response.data.status === "success") {
           sessionStorage.setItem("loggedIn", true);
           sessionStorage.setItem("userData", JSON.stringify(response.data.data));
+          setIsLoggedIn(true);
           navigate("/");
         } else {
           setError(response.data.message);

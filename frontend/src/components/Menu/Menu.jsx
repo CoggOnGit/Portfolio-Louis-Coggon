@@ -1,13 +1,14 @@
 import React, { useState, useEffect } from 'react';
 import { Link,useNavigate } from 'react-router-dom';
+import { useAuth } from '../AuthContext/AuthContext.jsx';
 import './Menu.scss';
 import githubIcon from '../../assets/logos/github-icon.webp';
 import cvIcon from '../../assets/logos/cv-icon.webp';
 
 
 function Menu() {
-  const [isLoggedIn, setIsLoggedIn] = useState(false);
   const navigate = useNavigate();
+  const { isLoggedIn, setIsLoggedIn } = useAuth();
 
   useEffect(() => {
     const loggedIn = sessionStorage.getItem("loggedIn") === "true";
@@ -18,8 +19,8 @@ function Menu() {
   const handleLogout = () => {
     sessionStorage.removeItem("loggedIn");
     sessionStorage.removeItem("userData");
-    setIsLoggedIn(false);
-    navigate("/connexion"); 
+    setIsLoggedIn(false); // Met à jour l'état de connexion dans AuthContext
+    navigate("/connexion");
   };
 
   function handleScrollToSection(event, sectionId) {

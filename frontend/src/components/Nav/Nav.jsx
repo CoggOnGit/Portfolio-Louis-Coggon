@@ -1,5 +1,6 @@
 import { Link, useLocation } from 'react-router-dom';
 import React, { useState, useEffect } from 'react';
+import { useAuth } from '../AuthContext/AuthContext.jsx';
 
 import './Nav.scss';
 /* import Game from '../Game/Game.jsx'; */
@@ -8,12 +9,8 @@ import logo from '../../assets/logos/cogg logo - NOIR SF-06.webp';
 
 function Nav() {
     const location = useLocation();
-    const [isLoggedIn, setIsLoggedIn] = useState(false);
+    const { isLoggedIn } = useAuth();
 
-    useEffect(() => {
-        const loggedIn = sessionStorage.getItem("loggedIn") === "true";
-        setIsLoggedIn(loggedIn);
-    }, []); 
 
     return (
         <nav>
