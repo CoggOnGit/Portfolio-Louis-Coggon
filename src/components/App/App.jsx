@@ -10,7 +10,7 @@ import Footer from '../Footer/Footer.jsx';
 function App() {
 
   return (
-    <BrowserRouter basename="">
+    <BrowserRouter basename="/portfolio-louis-coggon">
       <header>
         <Nav />
       </header>
